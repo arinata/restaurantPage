@@ -1,0 +1,71 @@
+.tabs {
+	display: flex;
+	justify-content: center;
+}
+.tabs label {
+	order: 1; 
+	display: block;
+	padding: 0.5rem 1rem;
+	margin-right: 0.2rem;
+	cursor: pointer;
+  background: #109c7e;
+  font-weight: bold;
+  transition: background ease 0.2s;
+}
+.tabs .tab {
+  order: 99;
+  flex-grow: 1;
+	width: 100%;
+	display: block;
+  padding: 1rem;
+  background: #fff;
+}
+.tabs input[type="radio"] {
+	display: none;
+}
+.tabs input[type="radio"]:checked + label {
+	background: #eee;
+}
+.tabs input[type="radio"]:checked + label + .tab {
+	display: block;
+}
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
+
+/**
+ * Generic Styling
+*/
+body {
+  background: #ddd;
+  background-image: url("https://img.jakpost.net/c/2019/05/20/2019_05_20_72657_1558348153._large.jpg");
+  min-height: 100vh;
+	box-sizing: border-box;
+	padding-top: 0vh;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 60rem;
+  margin: 0 auto;
+  font-size: 112%;
+}
+
+.tabContent{
+  margin-top: 0px;
+  margin-bottom: 0%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  height: 55vh;
+  overflow-y: scroll;
+  background-color: #eee;
+}
